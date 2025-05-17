@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booking Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .booking-container {
+      background-color: #fff;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    .booking-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .booking-container input, .booking-container select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .booking-container input[type="submit"] {
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .booking-container input[type="submit"]:hover {
+      background-color: #1976D2;
+    }
+  </style>
+</head>
+<body>
+
+<div class="booking-container">
+  <h2>Book an Appointment</h2>
+  <form action="/book" method="post">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="date" name="date" required />
+    <input type="time" name="time" required />
+    <input type="submit" value="Book Now" />
+  </form>
+</div>
+
+</body>
+</html>
